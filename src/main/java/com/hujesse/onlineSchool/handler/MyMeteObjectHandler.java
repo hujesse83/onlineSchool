@@ -15,8 +15,8 @@ public class MyMeteObjectHandler implements MetaObjectHandler {
     @Override
     public void insertFill(MetaObject metaObject) {
         log.info("start insert fill ....");
-       this.setFieldValByName("createTime",new Date(),metaObject);
-        this.setFieldValByName("updateTime",new Date(),metaObject);
+        this.setFieldValByName("createTime", new Date(), metaObject);
+        this.setFieldValByName("updateTime", new Date(), metaObject);
         /**
          * this clause has bugs derived from reference doc
          * `this.strictInsertFill(metaObject, "createTime", LocalDateTime.class, LocalDateTime.now()); `
@@ -26,6 +26,6 @@ public class MyMeteObjectHandler implements MetaObjectHandler {
     @Override
     public void updateFill(MetaObject metaObject) {
         log.info("start update fill ....");
-        this.setFieldValByName("updateTime",new Date(),metaObject);
+        this.setFieldValByName("updateTime", new Date(), metaObject);
     }
 }
